@@ -1,0 +1,90 @@
+
+body { 
+    background: url('images/brooke-lark-08bOYnH_r_E-unsplash.jpg')no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+        h1 {
+            display: inline;
+            position: relative;
+            font: 70px Helvetica, Sans-Serif;
+            letter-spacing: -5px;
+            color:white;
+            margin-right: 300px;
+        }
+        h1:after {
+            content: "Fitness Freaks";
+            position: relative; left: -395px; top: 2px;
+            color:green;
+
+        }
+
+
+button{
+    font-size: 18px;
+    background:none;
+    border-style: none;
+    transition: all 200ms;
+    padding:5px;
+    
+}
+#navigation{
+    background-color: green;
+    color:white;
+    font-size: 25px;
+    text-align: center;
+    margin-right: -200px;
+    background-origin:border-box;
+   
+
+}
+
+#NutritionalDiet{
+    background-color:green;
+    margin: 12px;
+    color:white;
+    border-style: none;
+    font-size: 25px;
+    text-align: center;
+    margin-left: -200px;
+    margin-top: 50px;
+
+}
+
+h2{
+    color: teal;
+    font-style:italic;
+    margin-left: 9px;
+    font-size:xx-large;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    
+
+}
+h3{
+    color:teal;
+    font-style: italic;
+    margin-left: 9px;
+    font-size:x-large;
+    
+}
+
+
+
+#h-input{
+    margin-left: 100px;
+
+}
+
+#w-input{
+    margin-left: 100px;
+
+}
+
+
+
+
+
+
+

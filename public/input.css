@@ -1,0 +1,24 @@
+body{
+    background: url("images/jamie-street-vcn2ndJ5LwE-unsplash.jpg")
+    no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+        h1 {
+            text-align: center;
+
+         
+        }
+        .label{
+            color: white;
+            padding: 8px;
+
+        }
+       
+
+
+
+
