@@ -18,7 +18,7 @@ app.get('/input', (req,res)=>{
     res.sendFile(path.join(__dirname+'/public/input.html'));
 });
 
-app.post('https://myfitness-freakapp.herokuapp.com/bmi',(req,res)=>{
+app.post('/bmi',(req,res)=>{
     var weight=req.body.weight;
     var height=req.body.height;
     var temp=height*height;
