@@ -29,7 +29,7 @@
      weight:weight.value,
      height:height.value
     }
- axios.post('http://localhost:3000/bmi', body)
+ axios.post('https://myfitness-freakapp.herokuapp.com/bmi', body)
         .then(response => {
           console.log(response)
             const BMI = response.data.BMI;
