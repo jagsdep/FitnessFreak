@@ -36,7 +36,7 @@ app.post('/cal',(req,res)=>{
     console.log(BMI);
 
     if(BMI < 18.5){
-        console.log("under healthy weight");
+        console.log("underweight");
         res.sendFile(path.join(__dirname+'/public/underweight.html'));
     }else if(BMI>25){
         console.log("overweight");

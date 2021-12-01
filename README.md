@@ -1,1 +1,1 @@
-# FitnessFreak
+# Fitness Freaks App
