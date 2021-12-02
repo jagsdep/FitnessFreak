@@ -16,7 +16,7 @@
 * [To-Do List](to-do-list)
 * [Status](#status)
 * [Created BY](#contact)
-* [License](#&#x1F4D9;license)
+* [License](#license&#x1F4D9;)
 
 ## About Fitness Freaks
 Fitness Freaks is an application that has multiple features. We can calculate the BMI of the user and suggest the user some good recipes and tips to maintain the healthy body weight.
