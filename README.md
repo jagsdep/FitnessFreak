@@ -30,7 +30,7 @@ JavaScript
 HTML / CSS
 
 ## Link
-[https://myfitness-freakapp.herokuapp.com]
+https://myfitness-freakapp.herokuapp.com
 
 ## Install 
 npm install
@@ -87,8 +87,8 @@ app.post('/cal',(req,res)=>{
 Completed
 
 ## Created By
-Jagruti Depan<br/>(https://www.linkedin.com/in/jags-depan-2a814121b/)
-(https://github.com/jagsdep/FitnessFreak#technologies)
+Jagruti Depan<br/>https://www.linkedin.com/in/jags-depan-2a814121b/
+https://github.com/jagsdep/FitnessFreak#technologies
 
 ## &#x1F4D9;License 
 
