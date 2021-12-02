@@ -16,7 +16,7 @@
 * [To-Do List](to-do-list)
 * [Status](#status)
 * [Created BY](#contact)
-* [License](#license)
+* [License](#&#x1F4D9;license)
 
 ## About Fitness Freaks
 Fitness Freaks is an application that has multiple features. We can calculate the BMI of the user and suggest the user some good recipes and tips to maintain the healthy body weight.
@@ -90,8 +90,8 @@ Completed
 Jagruti Depan<br/>(https://www.linkedin.com/in/jags-depan-2a814121b/)
 (https://github.com/jagsdep/FitnessFreak#technologies)
 
-## License
-ORANGE BOOK (&#x1F4D9;):
+## License 
+
 View Bellow<br/>
 (https://choosealicense.com/licenses/gpl-3.0/)
 
