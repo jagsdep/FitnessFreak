@@ -1,6 +1,8 @@
 # Fitness Freaks App
 
+
 ## Table of Contents
+* [About](#about-fitness-freaks)
 
 ## About Fitness Freaks
 Fitness Freaks is an application that has multiple features. We can calculate the BMI of the user and suggest the user some good recipes and tips to maintain the healthy body weight.
@@ -51,7 +53,7 @@ Completed
 Created by Jagruti Depan(https://www.linkedin.com/in/jags-depan-2a814121b/)
 
 ## License
-View Below
+View Here
 (https://choosealicense.com/licenses/gpl-3.0/)
 
 
