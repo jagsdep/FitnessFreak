@@ -93,7 +93,7 @@ Jagruti Depan<br/>(https://www.linkedin.com/in/jags-depan-2a814121b/)
 ## &#x1F4D9;License 
 
 View Bellow<br/>
-(https://choosealicense.com/licenses/gpl-3.0/)
+https://choosealicense.com/licenses/gpl-3.0/
 
 
 
