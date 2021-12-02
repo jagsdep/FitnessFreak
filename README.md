@@ -88,6 +88,7 @@ Completed
 
 ## Contact
 Created by Jagruti Depan(https://www.linkedin.com/in/jags-depan-2a814121b/)
+(https://github.com/jagsdep/FitnessFreak#technologies)
 
 ## License
 View Here
