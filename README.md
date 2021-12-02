@@ -91,6 +91,7 @@ Jagruti Depan<br/>(https://www.linkedin.com/in/jags-depan-2a814121b/)
 (https://github.com/jagsdep/FitnessFreak#technologies)
 
 ## License
+ORANGE BOOK (&#x1F4D9;):
 View Bellow<br/>
 (https://choosealicense.com/licenses/gpl-3.0/)
 
