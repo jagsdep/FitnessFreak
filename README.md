@@ -87,7 +87,7 @@ app.post('/cal',(req,res)=>{
 Completed
 
 ## Created By
-Jagruti Depan(https://www.linkedin.com/in/jags-depan-2a814121b/)
+Jagruti Depan<br/>(https://www.linkedin.com/in/jags-depan-2a814121b/)
 (https://github.com/jagsdep/FitnessFreak#technologies)
 
 ## License
