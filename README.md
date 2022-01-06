@@ -92,7 +92,7 @@ https://github.com/jagsdep/FitnessFreak#technologies
 
 ## &#x1F4D9;License 
 
-View Bellow<br/>
+Click Bellow<br/>
 https://choosealicense.com/licenses/gpl-3.0/
 
 
