@@ -13,10 +13,10 @@
  app.use(express.urlencoded({ extended: true }));//for parsing application/www-form -urlencoded
 
 
-// app.get('/', (req,res)=>{ // here the function is telling the server to ....... when a a request at the given route is called. Req, res is a callback function that listens the incoming request and responds to the client side, these objects are available in express framework
-//     console.log(path.join(__dirname))//returns the directory that is currently executing
+app.get('/', (req,res)=>{ // here the function is telling the server to ....... when a a request at the given route is called. Req, res is a callback function that listens the incoming request and responds to the client side, these objects are available in express framework
+    console.log(path.join(__dirname));//returns the directory that is currently executing
    
-// });
+ });
 
 app.get('/input', (req,res)=>{ 
     res.sendFile(path.join(__dirname+'/public/input.html'));
@@ -51,6 +51,4 @@ app.post('/cal',(req,res)=>{ //route to handle the BMI calculation logics
 
 const PORT = process.env.PORT || 3000; //3000 is the port where the backend server would be running
 
-app.listen(PORT, console.log(`Server started on port ${PORT}`));//starts the server on specified port
-
-
+app.listen(PORT, console.log(`Server started on port ${PORT}`)); //starts the server on specified port
