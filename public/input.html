@@ -6,13 +6,13 @@
 <h2>BMI Calculation</h2>
 
 
-<form action="./cal" method = "POST">
+<form action="./cal" method = "POST" id="formSubmit"> <!-- directs the request to proper server-side route -->
 
   <label for="weight">Weight in pounds:</label><br>
-  <input type="text" id="weight" name="weight" ><br>
+  <input type="text" id="weight" name="weight" required><br>
   <label for="height">Height in inches:</label><br>
-  <input type="text"  id="height" name="height"><br><br>
-  <input type="submit" onclick="myFunction()" value="Check BMI">
+  <input type="text"  id="height" name="height" required><br><br>
+  <input type="button" onclick="myFunction()" value="Check BMI">
 </form> 
 
 
@@ -20,7 +20,7 @@
 
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+<script src="config.js"></script> 
 <script>
   function myFunction() {
     let weight= document.querySelector('#weight')
@@ -29,12 +29,13 @@
      weight:weight.value,
      height:height.value
     }
-    axios.post('https://myfitness-freakapp.herokuapp.com/bmi', body)
+    
+    axios.post(config_url + '/bmi', body)//using the config_url to call the server
         .then(response => {
           console.log(response)
             const BMI = response.data.BMI;
             alert("Your BMI is:- "+parseFloat(BMI).toFixed(2));
-            
+            document.getElementById("formSubmit").submit();
         })
         .catch(error => console.error(error));
    
