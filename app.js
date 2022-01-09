@@ -1,12 +1,12 @@
 
- const express = require('express')//requiring the express imports the express 
+ const express = require('express')//want to use express pkg inside my backend js file
  const cors = require('cors')//set of rules how you allow computer to interact with
  const app = express()//import the express and assign it to the variable app. that way it can handle various request such as app.get request or app.post request 
  const path = require('path');//provides useful functionality to interact with the file
  //location of the files 
  
  //to use middleware we call .use() on the express
- app.use(express.json())//for parsing application/JSONapp.use
+ app.use(express.json()) //when we want to able to accept JSON
  app.use(cors())
  
  app.use(express.static("public"));//app.use executes express.static middleware to access files from the public folder via HTTP
@@ -20,6 +20,7 @@ app.get('/', (req,res)=>{ // here the function is telling the server to ....... 
 
 app.get('/input', (req,res)=>{ 
     res.sendFile(path.join(__dirname+'/public/input.html'));
+  
 });
 
 app.post('/bmi',(req,res)=>{ //Add a BMI/calculated BMI
@@ -27,7 +28,17 @@ app.post('/bmi',(req,res)=>{ //Add a BMI/calculated BMI
     var height=req.body.height;
     var temp=height*height;
     var BMI=(weight / temp)*703;
-    res.json({BMI:BMI});// send a JSON response
+
+    if(!weight || !height){
+        res.status(400).send('Enter the missing information')
+    }else{
+        res.json({BMI:BMI});// send a JSON response
+    }
+   
+
+   
+
+  
 });
 
 app.post('/cal',(req,res)=>{ //route to handle the BMI calculation logics

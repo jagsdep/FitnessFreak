@@ -30,7 +30,7 @@
      height:height.value
     }
     
-    axios.post(config_url + '/bmi', body)//using the config_url to call the server
+    axios.post(config_url + '/bmi', body)//It creates the data in the backend and returns a response.  
         .then(response => {
           console.log(response)
             const BMI = response.data.BMI;
