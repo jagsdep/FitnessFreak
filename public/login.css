@@ -1,0 +1,103 @@
+
+ body { 
+    background: url('images/roonz-nl-vjDbHCjHlEY-unsplash.jpg')no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	;
+
+  } 
+ 
+  
+.box{
+	width:300px;
+	padding:30px;
+	/* position: absolute; */
+	/* top:50%;
+	left:50%;
+	transform: translate(-50%, -50%); */
+    /* background: rgba(106, 103, 103, 0.7);  */ 
+	/* text-align:center; */
+
+}
+.box h1
+{
+	color:#ffc400ec;
+	text-transform: uppercase;
+	font-weight: 700;
+
+}
+.box input[type="text"]
+{
+	border:0;
+	background:none;
+	display:block;
+	margin: 20px auto;
+	text-align: center;
+	border: 3px solid #ffc400ec;
+	padding:14px 10px;
+	width: 220px;
+	outline: none;
+	font-weight: 600;
+    color: black;
+	border-radius:24px;
+	transition:0.25px;
+}
+.box input[type="password"]
+{
+	border:0;
+	background:none;
+	display:block;
+	margin: 20px auto;
+	text-align: center;
+	border: 3px solid #ffc400ec;
+	padding:14px 10px;
+	width: 220px;
+	outline: none;
+    color: black;
+	border-radius:24px;
+	transition:0.25px;
+}
+
+.box input[type="text"]:focus
+{
+	width:270px;
+	border-color:#ffc400ec;
+	
+}
+
+ .box input[type="password"]:focus
+{
+	width:270px;
+	border-color:#ffc400ec;
+	
+}
+
+.box input[type="text"]:hover{
+	background: #ffc400ec;
+}
+.box input[type="password"]:hover{
+	background: #ffc400ec;
+}
+.box input[type="button"]{
+	border:0;
+	background:none;
+	display:block;
+	margin: 20px auto;
+	text-align: center;
+	/* border: 3px solid #ffc400ec; */
+	padding:14px 10px;
+	outline: none;
+	color: black;
+	border-radius:24px; 
+	transition:0.25px;
+	cursor: pointer;
+
+}
+.box input[type="button"]:hover{
+	background: #ffc400ec;
+}
+
+
+

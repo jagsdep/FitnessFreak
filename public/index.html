@@ -1,36 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive</title>
     <link rel="stylesheet" href="index.css">
-  
-</head>
-
-<body>
-
-<header>
-<div class="container">
-      <h1>Fitness Freaks</h1>
-     <a id="navigation" href="/input">Check BMI</a>   
-      
-      <a id="NutritionalDiet" href="diet.html">Nutritional-Diet</a>
-</div>
-
-    
- </header>
-
-<br><br><br><br><br>
-<h2> self-care is <br>how you take your power back </h2>
-
-<h3>live healthy, live happy! </h3>
-
-
-
-
-
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <!-- chart.js is loaded now 
+    -->
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Fitness Freaks</h1>
+        <!-- <a id="checkBmi" href="/input">Check BMI</a>
+        <a id="NutritionalDiet" href="recipe.html">Nutritional-Diet</a> -->
+        <a id="Login"  href="login.html">Login</a>
+      </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2> self-care is <br>how you take your power back </h2>
+    <h3>live healthy, live happy! </h3>
+  </body>
+  <script>
+    var url = window.location.href
+    var hashes = url.split("?")[1]
+    if (hashes == 'action=logout') {
+      sessionStorage.removeItem('tokenSecret')
+    }
+  </script>
 </html>

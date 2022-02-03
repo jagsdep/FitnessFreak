@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="diet.css">
+  <body>
+    <div style="text-align: right; font-size: 18px;padding-top: 10px; background-color:green;color: white;margin: 12px;text-align: center;border-style: none;padding: 5px;">
+      
+     
+      <div class ="col-sm-12"  >
+        <div class="col-sm-6" >
+      <a href='bmiData.html' style="padding-right: 120px;color: white;">Check Your BMI Stats </a>
+      <a id="NutritionalDiet" style='padding-right: 120px;color: white;' href="recipe.html">Nutritional-Diet</a>
+      <a title="Log Out" class="loginlogoutlink-logout" style=' padding-right: 120px;color: white;'  href="index.html?action=logout">Log-Out</a>
+      <label class="label-control">Select Recipes Option</label>
+            <select name="Options" id="options" onchange="handleView()">
+               
+                <option value="meals">Meals</option>
+                <option value="shakes">Shakes</option>
+                <option value="salads">Salads</option>
+                
+                
+              </select>
+      
+
+      
+            
+        </div>
+      </div>
+    </form>
+    </div>
+    <br>
+   
+  
+    <br>
+
+    <div id="mealRecipe" style="display: block;">
+    <h1>Recipes to maintain Healthy Weight</h1>
+    <ul>
+      <li>
+        <h2>Protein Pancakes</h2>
+      </li>
+      <iframe width="360" height="260" src="https://www.youtube.com/embed/EQ4GEZisJ8g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <li>
+        <h2>Creamy Avocado & White Bean Wrap</h2>
+      </li>
+      <iframe width="360" height="260" src="https://www.youtube.com/embed/37tIxVn1Hi0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <li>
+        <h2>Zero Carb Crust Pizza</h2>
+      </li>
+      <iframe width="360" height="260" src="https://www.youtube.com/embed/eXvV91tq3vc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <li>
+        <h2>Lettuce Wraps</h2>
+      </li>
+      <iframe width="360" height="260" src="https://www.youtube.com/embed/XoQjEfsGUyU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </ul>
+  </div>
+
+
+    <div id="shakesRecipe"style="display: none;">
+      
+      <ul>
+        <li>
+          <h2>Oats Shake for weight loss</h2>
+        </li>
+        <iframe width="360" height="260" src="https://www.youtube.com/embed/OrfmAAgKJmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+        <li>
+          <h2>Green Smoothies for Weight Loss</h2>
+        </li>
+        <iframe width="360" height="260" src="https://www.youtube.com/embed/MuWX7nN74co" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+        <li>
+          <h2>Oats Weight-Gain Smoothie</h2>
+        </li>
+        <iframe width="360" height="260" src="https://www.youtube.com/embed/XoPtiClo214" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+        <li>
+          <h2>Banana Smoothie</h2>
+        </li>
+        <iframe width="360" height="260" src="https://www.youtube.com/embed/uUv3cby4yMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </ul>
+
+  </div>
+
+  <div id="saladRecipe"style="display: none;">
+      
+    <ul>
+      <li>
+        <h2>Vegan Pasta Salad</h2>
+      </li>
+      <iframe width="360" height="260" src="https://www.youtube.com/embed/hEHQML9SNeI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <li>
+        <h2>Weight Loss Salad</h2>
+      </li>
+      <iframe width="360" height="260" src="https://www.youtube.com/embed/oHIZ87cYC74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <li>
+        <h2>High Protein Chickpea Salad</h2>
+      </li>
+      <iframe width="360" height="260" src="https://www.youtube.com/embed/lGBaLIB_aZE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <li>
+        <h2>Vegan Thai Salad</h2>
+      </li>
+      <iframe width="360" height="260" src="https://www.youtube.com/embed/g3-TUBdOVmw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </ul>
+
+  </div>
+
+</body>
+
+<script>
+function handleView() {
+    var select = document.getElementById('options');
+    var value = select.options[select.selectedIndex].value;
+    console.log(value);
+
+    if (value == 'meals') {
+        document.getElementById('mealRecipe').style.display = "block";
+        document.getElementById('shakesRecipe').style.display = "none";
+        document.getElementById('saladRecipe').style.display = "none"
+       
+
+    } else if (value == "shakes") {
+        document.getElementById('mealRecipe').style.display = "none";
+        document.getElementById('shakesRecipe').style.display = "block";
+        document.getElementById('saladRecipe').style.display = "none"
+        
+    } else if(value =='salads')  {
+        document.getElementById('saladRecipe').style.display = "block"
+        document.getElementById('shakesRecipe').style.display = "none";
+        document.getElementById('mealRecipe').style.display = "none";
+
+    }else  {
+        document.getElementById('mealRecipe').style.display = "none"
+        document.getElementById('shakesRecipe').style.display = "none";
+
+    }
+
+
+}
+
+
+</script>
+
+</html>

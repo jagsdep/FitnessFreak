@@ -1,46 +1,86 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="input.css">
-<body>
-
-<h2>BMI Calculation</h2>
-
-
-<form action="./cal" method = "POST" id="formSubmit"> <!-- directs the request to proper server-side route -->
-
-  <label for="weight">Weight in pounds:</label><br>
-  <input type="text" id="weight" name="weight" required><br>
-  <label for="height">Height in inches:</label><br>
-  <input type="text"  id="height" name="height" required><br><br>
-  <input type="button" onclick="myFunction()" value="Check BMI">
-</form> 
-
-
-</body>
-
-
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="config.js"></script> 
-<script>
-  function myFunction() {
-    let weight= document.querySelector('#weight')
-    let height= document.querySelector('#height')
-    let body={
-     weight:weight.value,
-     height:height.value
-    }
+  <head>
+    <style>
+      a {
+        color: green;
+        background-color: transparent;
+        text-decoration: none;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="input.css">
+  </head>
+  <body>
+    <div style="text-align: right; font-size: 18px; background-color: darkblue;  padding-right: 240px; ;">
+      <a href='bmiData.html' style="padding-right: 220px;color: white;">Check Your BMI Stats </a>
+      <a id="NutritionalDiet" style="text-align: right; color: white; padding-right: 200px;" href="recipe.html">Nutritional-Diet</a>
+      <a title="Log Out" style="color: white;" class="loginlogoutlink-logout" href="index.html?action=logout">Log-Out</a>
+    </div>
+    <h2 style="text-align: center;">BMI Calculation</h2>
+    <form style="text-align: center;" action="./cal" method="POST" id="formSubmit">
+      <!-- directs the request to proper server-side route -->
+      <label for="date">Date:</label>
+      <br>
+      <input type="text" placeholder="mm/dd/yr" id="date" name="date" required>
+      <br>
+      <label for="gender">Gender:</label>
+      <br>
+      <input type="text" placeholder="F/M" id="gender" name="gender" required>
+      <br>
+      <label for="age">Age:</label>
+      <br>
+      <input type="integer" id="age" name="age" required>
+      <br>
+      <label for="weight">Weight:</label>
+      <br>
+      <input type="text" placeholder="lbs" id="weight" name="weight" required>
+      <br>
+      <label for="height">Height:</label>
+      <br>
+      <input type="text" placeholder="inches" id="height" name="height" required>
+      <br>
+      <br>
+      <input type="button" onclick="myFunction()" value="Check BMI">
+    </form>
+  </body>
+  <script src = "https://unpkg.com/axios/dist/axios.min.js" > </script> 
+  
+  <script src = "config.js" > </script>  
+  <script>
+        function myFunction() {
+            let date = document.querySelector('#date')
+            let age = document.querySelector('#age')
+            let gender = document.querySelector('#gender')
+            let weight = document.querySelector('#weight')
+            let height = document.querySelector('#height')
+            let body = {
+                date: date.value,
+                age: age.value,
+                gender: gender.value,
+                weight: weight.value,
+                height: height.value
+            }
+            let config = {
+                headers: {
+                    'authorization': sessionStorage.getItem('tokenSecret'),
+                }
+            }
     
-    axios.post(config_url + '/bmi', body)//It creates the data in the backend and returns a response.  
-        .then(response => {
-          console.log(response)
-            const BMI = response.data.BMI;
-            alert("Your BMI is:- "+parseFloat(BMI).toFixed(2));
-            document.getElementById("formSubmit").submit();
-        })
-        .catch(error => console.error(error));
-   
-  }
-  </script>
+    
+            axios.post(config_url + '/bmi', body, config) //It creates the data in the backend and returns a response.  
+                .then(response => {
+                    console.log(response)
+                    const BMI = response.data.BMI;
+                    alert("Your BMI is:- " + parseFloat(BMI).toFixed(2));
+                    document.getElementById("formSubmit").submit();
+                })
+                .catch(error => console.error(error));
+    
+        } 
+    </script>
   
 
 </html>
