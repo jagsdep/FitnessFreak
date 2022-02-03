@@ -1,0 +1,21 @@
+Data Collection: I have used datasets from 2 different   
+    data sources.
+        One is static data I got from Kaggle and was in csv format. 
+        Other is a user data from the application that is getting saved in mongoDB database.
+    To retrieve the data from both datasets different methods are applied. 
+        To retrieve the data from mongoDB database I have used findOne() methods in server side where it accepts the query document that describes the data we wnt to retrieve. 
+
+        To retrieve the data from CSV file, I have installed csvtojson package and required it and generated an array of object in JSON format. 
+
+Data Preparation: The datasets have bene saved in 2 different formats.
+    I created a user login and sign up form where all the data entered by the user in the input field gets saved to mongoDB database. But to connect mongoDB to nodejs I am using a module called mongoose, I installed mongoose and required it in the server in app.js file. Once the user enters the data in input field the data gets saved as defined in the both profile schema and user schema that gives th model of that data. 
+    Now  that we have connection to the database we need to create a mechanism by which data will be added to the database and that would be done through REST API where I have created a endpoint that will be used to send data to my server. My server then receives the data and store in the database. I have used GET and POST methods to communicate between he client and server. To parse te data in body I have added a middleware into my application to provide functionality. The config will allow to pass data and converts the data into JSON format. 
+Mongoose: It saves the function that takes JSON Object and store it in database. The body parser then converts the user input into the JSON format and for that I have created an instance and will save it using myDAta.save.
+
+Data Cleaning & EDA: To plot the graph or to visualize the   
+    data, I have used chart js in front end side in javascript. The csv data file has so many null values that will occupy the space and also when calculating the average the value wont be calculated correctly as it will take many data with null values projecting the wrong analyzing. So while plotting the table I checked for null values in  height, weight and BMI columns and skipped those rows from the table. Basically, I cleaned the data and i am dynamically checking whether user in csv formats have all the parameter or not. 
+    
+Chart JS: To visualize the data from both datasets I have used chart.js in front end in javascript. In chart js even though the data is in JSON format,we  need to change the data format in a way that chart.js understands it and plots the graph. I visualized the data in 3  different chart types that is Line chart, Bar chart, and Pie Chart. I gave all the logics and inside the javascript and accordingly the graph was plotted in the application. 
+
+
+
