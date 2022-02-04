@@ -75,7 +75,7 @@ app.get('/csvBmiData', (req,res)=>{
     csv()
   .fromFile("bmi_data.csv")
   .then(jsonArrayObj => { //when parse finished, result will be emitted here.
-     console.log(jsonArrayObj); 
+    //  console.log(jsonArrayObj); 
      res.send({status:'success', data: jsonArrayObj})
 
    })
@@ -85,9 +85,10 @@ app.get('/csvBmiData', (req,res)=>{
 app.get('/profileBmiData', verifyToken, async (req,res)=>{
     console.log(req.user.user) 
     const profileDetails = await Profile.findOne({
-        user: mongoose.Types.ObjectId(req.user.user)
+        user_id: mongoose.Types.ObjectId(req.user.user)
     }).exec()
-    console.log(profileDetails)
+     console.log(profileDetails)
+     
     res.send({status:'success', data:profileDetails});
     
    });
